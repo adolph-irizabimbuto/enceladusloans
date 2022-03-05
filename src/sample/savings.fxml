@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="savingsCalCulatorPane" prefHeight="671.0" prefWidth="968.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MortgageController">
+   <children>
+      <Pane fx:id="savingsGoalsCalcPAne" layoutX="-3.0" layoutY="-2.0" prefHeight="675.0" prefWidth="569.0" style="-fx-background-color: white;">
+         <children>
+            <Pane fx:id="visualiserReportPane" layoutX="1.0" layoutY="475.0" prefHeight="200.0" prefWidth="539.0" style="-fx-background-color: gray;">
+               <children>
+                  <Label fx:id="speningReportOutPutLabel" alignment="CENTER" layoutY="47.0" prefHeight="151.0" prefWidth="540.0" style="-fx-background-color: pink;" text="You're speanding 1000 over">
+                     <font>
+                        <Font name="PT Serif Caption" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="-7.0" prefHeight="48.0" prefWidth="540.0" style="-fx-background-color: orange;" text="Spending Report" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="242.0" fitWidth="260.0" layoutX="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/blueenc.png" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.78" />
+               </effect>
+            </ImageView>
+            <Pane layoutX="1.0" layoutY="475.0" prefHeight="205.0" prefWidth="540.0" style="-fx-background-color: gray;">
+               <children>
+                  <Label fx:id="outPutLabel" alignment="CENTER" prefHeight="56.0" prefWidth="539.0" style="-fx-background-color: pink;" text="Enter details then click what you want to calculate." textAlignment="CENTER">
+                     <font>
+                        <Font name="Apple SD Gothic Neo Regular" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="281.0" prefHeight="182.0" prefWidth="529.0">
+               <children>
+                  <TextField fx:id="principal" layoutX="130.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (250000)" />
+                  <TextField fx:id="weeklyIncome" layoutX="130.0" layoutY="38.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (4.92)" />
+                  <TextField fx:id="weeklyExpenes" layoutX="130.0" layoutY="76.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (25)" />
+                  <TextField fx:id="lengthMonths" layoutX="130.0" layoutY="114.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (4)" />
+                  <TextField fx:id="desiredAmount" layoutX="130.0" layoutY="153.0" prefHeight="24.0" prefWidth="155.0" />
+                  <Label layoutX="5.0" layoutY="4.0" prefWidth="100.0" text="Starting Balance:" />
+                  <Label layoutX="5.0" layoutY="42.0" prefWidth="100.0" text="Weekly Income: " />
+                  <Label layoutX="5.0" layoutY="80.0" prefHeight="17.0" prefWidth="110.0" text="Weekly Expesnes: " />
+                  <Label layoutX="5.0" layoutY="118.0" prefHeight="17.0" prefWidth="125.0" text="Goal Length (Months): " />
+                  <Button fx:id="calculateAmount" alignment="BASELINE_CENTER" layoutX="348.0" layoutY="1.0" mnemonicParsing="false" onAction="#calculateSavings" prefHeight="36.0" prefWidth="181.0" stylesheets="@mortgagestylehseet.css" text="Calculate Amount">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons7-transaction%202.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="visualiseSpening" alignment="BASELINE_CENTER" layoutX="348.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSpendingButtons" prefHeight="36.0" prefWidth="181.0" stylesheets="@mortgagestylehseet.css" text="Calculate Expenses">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons7-transaction%202.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="calculateLegnthButton" alignment="BASELINE_CENTER" layoutX="348.0" layoutY="50.0" mnemonicParsing="false" onAction="#calculateSavings" prefHeight="36.0" prefWidth="181.0" stylesheets="@mortgagestylehseet.css" text="Calculate Length ">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons7-transaction%202.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="5.0" layoutY="156.0" text="Desired  Amount: " />
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="289.0" layoutY="207.0" prefHeight="51.0" prefWidth="248.0" style="-fx-background-color: #030C1D; -fx-text-fill: white;" text="Savings Goal Calculator" textAlignment="CENTER">
+               <font>
+                  <Font name="Optima Regular" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="285.0" layoutY="534.0" prefHeight="139.0" prefWidth="255.0">
+               <children>
+                  <Button fx:id="mortgageNavButton" layoutX="62.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="193.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Mortgage Calculator  ">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-home_page.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="InflationNavButton" layoutX="63.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="192.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Inflation Calculator  ">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-account.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="homeNavButton" layoutX="151.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="103.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" onDragDetected="#handleNAVBUTTONS" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="picAndVSpane" layoutX="536.0" layoutY="-1.0" prefHeight="673.0" prefWidth="435.0">
+         <children>
+            <Pane fx:id="trackSpeningPane" layoutX="-2.0" layoutY="1.0" prefHeight="676.0" prefWidth="438.0" style="-fx-background-color: white;">
+               <children>
+                  <PieChart fx:id="pieChart" layoutX="6.0" layoutY="311.0" prefHeight="360.0" prefWidth="427.0" title="Spending Analysis" />
+                  <Pane fx:id="pieChartScreenDoorPane" layoutX="-1.0" layoutY="302.0" prefHeight="375.0" prefWidth="439.0" style="-fx-background-color: white;" />
+                  <Label layoutX="30.0" layoutY="86.0" prefHeight="25.0" prefWidth="66.0" text="Rent:" />
+                  <Label layoutX="30.0" layoutY="162.0" prefHeight="25.0" prefWidth="66.0" text="Electricity:" />
+                  <Label layoutX="31.0" layoutY="238.0" prefHeight="25.0" prefWidth="103.0" text="Other Expenses: " />
+                  <Label layoutX="31.0" layoutY="124.0" prefHeight="25.0" prefWidth="94.0" text="Food:" />
+                  <Label layoutX="31.0" layoutY="200.0" prefHeight="25.0" prefWidth="103.0" text="Transportation:" />
+                  <TextField fx:id="rent" layoutX="148.0" layoutY="85.0" />
+                  <TextField fx:id="food" layoutX="148.0" layoutY="123.0" />
+                  <TextField fx:id="electricity" layoutX="148.0" layoutY="161.0" />
+                  <TextField fx:id="transportation" layoutX="148.0" layoutY="199.0" />
+                  <TextField fx:id="otherExpesnes" layoutX="148.0" layoutY="237.0" />
+                  <Label layoutX="125.0" layoutY="18.0" prefHeight="26.0" prefWidth="188.0" text="Spending Visualiser ">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="analyseSpeningButton" layoutX="133.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleSpendingButtons" styleClass="visualizeButton" stylesheets="@mortgagestylehseet.css" text="Analyse Spending " />
+                  <Button fx:id="backButton" layoutX="13.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSpendingButtons" prefHeight="31.0" prefWidth="88.0" styleClass="backButton" stylesheets="@mortgagestylehseet.css" text="Back">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons8-go_back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="30.0" layoutY="44.0" prefHeight="48.0" prefWidth="228.0" text=" enter  FORTNIGHTLY expenses " textFill="#bf0c0c" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="690.0" fitWidth="489.0" layoutX="-3.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/savingsCalcPic.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

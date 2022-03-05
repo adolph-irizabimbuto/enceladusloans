@@ -1,0 +1,65 @@
+.button{
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width:  0px 6px 0px 0px;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
+}
+
+.button:focused {
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-border-color: red;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button: pressed {
+    -fx-background-color: yellow;
+    -fx-text-fill: white;
+}
+.button: hover{
+    -fx-background-color: beige;
+    -fx-background-radius: 0px;
+    -fx-text-fill: white;
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width: 0px 0px 0px 4px;
+}
+.bottomButtons{
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width: 0px 6px 0px 0px;;
+    -fx-background-radius: 0;
+    -fx-background-color: #9EACCC;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1.2em;
+    -fx-text-fill: white;
+}
+
+.bottomButtons: hover{
+    -fx-background-color: pink;
+
+}
+
+//VISULIZER BUTTON
+
+.visualizeButton{
+-fx-border-color: rgb(22,169,250);
+    -fx-border-width:  0px 6px 0px 0px;
+    -fx-background-radius: 0;
+    -fx-background-color: gray;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1.2em; /* 12 */
+    -fx-text-fill: black;
+}
+
+.backButton: hover {
+  -fx-background-color: #030C1D;
+  -fx-border-width:  0px 0px 0px 0px;
+
+
+
+
+
+}

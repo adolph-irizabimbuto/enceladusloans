@@ -1,0 +1,115 @@
+
+.button{
+    -fx-background-color:navy blue;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1.3em; /* 12 */
+    -fx-text-fill: white;
+    -fx-background-radius: 40 40 40 40;
+}
+.button:hover {
+    -fx-background-color: navy blue;
+    -fx-text-fill: #b8b1b1;
+    -fx-background-radius: 40 40 40 40;
+}
+
+.button:pressed {
+    -fx-background-color: navy;
+    -fx-text-fill: white;
+}
+
+.loginButton: hover{
+    -fx-background-color: white;
+    -fx-text-fill: navy blue;
+    -fx-background-radius: 40 40 40 40;
+
+
+}
+// Captcha Buttons
+
+.captchaButton{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+.socialMediaButton{
+
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1.3em; /* 12 */
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 0 0;
+    }
+.socialMediaButton: hover {
+ -fx-background-color: transparent;
+ -fx-background-radius: 0 0 0 0;
+ -fx-border-color: gray;
+ -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+.homeScreenButtons{
+    -fx-background-color:navy blue;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1.3em; /* 12 */
+    -fx-text-fill: white;
+    -fx-background-radius: 60 0 0 60;
+
+}
+.homeScreenButtons: hover {
+    -fx-background-color: gray;
+    -fx-background-radius: 60 0 0 60;
+}
+
+
+.text-field {
+  -fx-text-fill: white;
+  -fx-background-radius: 40 40 40 40;
+  -fx-background-color: transparent;
+  -fx-border-color: navy blue;
+  -fx-border-width: 0px 0px 3px 0px;
+  -fx-prompt-text-fill: white;
+ }
+
+
+}
+
+.captchaTextField {
+  -fx-background-radius: 40 40 40 40;
+  -fx-background-color: white;
+  -fx-text-fill: black;
+  -fx-border-width: 0px 0px 0px 0px;
+}
+
+
+.password-field{
+ -fx-background-radius: 40 40 40 40;
+ -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+.pane{
+    -fx-background-radius: 0 50 0 50;
+    -fx-border-radius: 18 18 18 18;
+}
+
+.checkPane{
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-border-color: gray;
+    -fx-border-radius: 0 0 0 0;
+    -fx-border-width: 2;
+}
+
+
+.check-box:selected .mark {
+-fx-background-color: green;
+}
+
+.check-box:selected .box {
+-fx-background-color: transparent;
+-fx-border-color: transparent;
+}
+
+.grid-pane{
+ -fx-background-color: transparent;
+
+}

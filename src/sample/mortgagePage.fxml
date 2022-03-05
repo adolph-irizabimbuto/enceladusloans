@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mortgageCalculatorPane" prefHeight="671.0" prefWidth="968.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="675.0" prefWidth="569.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="242.0" fitWidth="260.0" layoutX="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/blueenc.png" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.78" />
+               </effect>
+            </ImageView>
+            <Pane layoutX="1.0" layoutY="475.0" prefHeight="56.0" prefWidth="540.0">
+               <children>
+                  <Label fx:id="outPutLabel" alignment="CENTER" prefHeight="56.0" prefWidth="539.0" style="-fx-background-color: pink;" text="Enter details then click what you want to calculate." textAlignment="CENTER">
+                     <font>
+                        <Font name="Apple SD Gothic Neo Regular" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="loanAmountText" layoutX="129.0" layoutY="308.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (250000)" />
+            <TextField fx:id="annualInterestField" layoutX="129.0" layoutY="346.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (4.92)" />
+            <TextField fx:id="YerasField" layoutX="129.0" layoutY="384.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (25)" />
+            <TextField fx:id="yearsElapsedField" layoutX="129.0" layoutY="422.0" prefHeight="24.0" prefWidth="155.0" promptText="eg: (4)" />
+            <Label layoutX="29.0" layoutY="312.0" stylesheets="@../../out/production/EnceladusLoans/sample/stylehseet.css" text="Loan Amount:" />
+            <Label layoutX="29.0" layoutY="350.0" text="Annual Interest:" />
+            <Label layoutX="29.0" layoutY="390.0" text="Term (Years): " />
+            <Label layoutX="29.0" layoutY="426.0" prefHeight="17.0" prefWidth="85.0" text="Years Elapsed: " />
+            <Button fx:id="calculateMonthlyRepayments" alignment="BASELINE_CENTER" layoutX="297.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleMortgageCalculations" prefHeight="34.0" prefWidth="242.0" stylesheets="@mortgagestylehseet.css" text="Calculate Monthly Repayments ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons7-transaction%202.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="calculateTotalInterest" alignment="BASELINE_CENTER" layoutX="298.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleMortgageCalculations" prefHeight="33.0" prefWidth="242.0" stylesheets="@mortgagestylehseet.css" text="Calculate Total Interest ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons83-transaction.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="calculateTotalAmountPaid" layoutX="297.0" layoutY="386.0" mnemonicParsing="false" onAction="#handleMortgageCalculations" prefHeight="33.0" prefWidth="243.0" stylesheets="@mortgagestylehseet.css" text="Calculate Total Amount Paid ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons8-transaction.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="calculateBalance" layoutX="295.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleMortgageCalculations" prefHeight="33.0" prefWidth="244.0" stylesheets="@mortgagestylehseet.css" text="Calculate Remaining Balance">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/icons81-transaction.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" layoutX="295.0" layoutY="220.0" prefHeight="51.0" prefWidth="248.0" style="-fx-background-color: #030C1D; -fx-text-fill: white;" text="Mortgage Calculator " textAlignment="CENTER">
+               <font>
+                  <Font name="Optima Regular" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="285.0" layoutY="534.0" prefHeight="139.0" prefWidth="255.0">
+               <children>
+                  <Button fx:id="savingsNavButton" layoutX="65.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="190.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Savings Calculator  ">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-receive_cash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="InflationNavButton" layoutX="65.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="190.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Inflation Calculator  ">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-account.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="homeNavButton" layoutX="151.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleNAVBUTTONS" prefHeight="33.0" prefWidth="103.0" styleClass="bottomButtons" stylesheets="@mortgagestylehseet.css" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/ghost/Desktop/icons8-home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="536.0" layoutY="-1.0" prefHeight="673.0" prefWidth="435.0">
+         <children>
+            <ImageView fitHeight="675.0" fitWidth="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/ghost/Desktop/enceladusLoans%20/mortagePic.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
